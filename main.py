@@ -24,9 +24,10 @@ def get_project_settings(importFilepath):
 # Main function
 if __name__ == '__main__':
     # Set up the import filepath
-    import_filepath = "C:/Users/james/PycharmProjects/how_to_build_a_metatrader5_trading_bot_expert_advisor/settings.json"
+    import_filepath = "./setting.json"
     # Import project settings
     project_settings = get_project_settings(import_filepath)
+    print("project_settings: ", project_settings)
     # Start MT5
     mt5_interface.start_mt5(project_settings["username"], project_settings["password"], project_settings["server"],
                             project_settings["mt5Pathway"])
